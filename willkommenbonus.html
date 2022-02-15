@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            width: 100%;
+            background-color: #ffed00;
+            color: #004560;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        #static-page-section {
+            box-sizing: border-box;
+            font-family: Roboto;
+            font-weight: normal;
+            font-stretch: condensed;
+            color: #fff;
+            background-color: #004560;
+        }
+        .dark-section {
+            background-color: #004560;
+            position: relative;
+        }
+        .light-section {
+            padding: 128px 0 156px;
+            width: 100%;
+            background-color: #009cbc;
+            clip-path: polygon(0% 0%, 100% 10%, 100% 95%, 0% 100%);
+        }
+        .light-section.top {
+            padding: 0;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+            height: 685.6px;
+            background-image: url(./willkommensbonus-top-1.png);
+            background-repeat: no-repeat;
+        }
+        .top-description {
+            margin-left: auto;
+            padding: 35px 100px 125px 10px;
+            max-width: 415px;
+            text-transform: uppercase;
+
+        }
+        .top-description .section-title {
+            margin-bottom: 50px;
+            font-size: 60px;
+        }
+        .list-title {
+            margin-bottom: 22px;
+            font-size: 22px;
+        }
+        .top-list {
+            margin-bottom: 95px;
+            width: 395px;
+            font-size: 20px;
+        }
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        .list-item::before {
+            content: ' ';
+            display: inline-block;
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            border: solid 2px #fff;
+            border-radius: 50%;
+        }
+        .small-btn {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .big-btn {
+            padding: 35px;
+            font-size: 30px;
+            border-radius: 17px;
+        }
+        .bonus-image {
+            position: absolute;
+            z-index: 100;
+            bottom: 99%;
+            left: 30%;
+            width: 424px;
+            height: 380px;
+            background-image: url(./willkommensbonus-top-2.png);
+            background-position: 0 -75px;
+            background-repeat: no-repeat;
+        }
+        .main-content {
+            margin: 0 auto;
+            width: 812px;
+        }
+        .main-content .section-title {
+            font-size: 76px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        .centered {
+            padding: 70px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .centered .section-title {
+            margin-bottom: 65px;
+            font-size: 65px;
+        }
+        .bonus-info {
+            margin-bottom: 70px;
+            font-size: 36px;
+            line-height: 0.75;
+        }
+        .big-text {
+            display: block;
+            margin-top: 15px;
+            font-size: 54px;
+            font-weight: bold;
+        }
+        .accent {
+            color: #ffe500;
+        }
+        .num-list {
+            margin: 20px 0 72px;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .num-list-item {
+            margin-bottom: 72px;
+        }
+        .item-info {
+            margin-top: 10px;
+            font-size: 30px;
+            line-height: 1.33;
+            font-weight: normal;
+        }
+        .description {
+            padding: 60px 0;
+        }
+        .description .big-btn {
+            margin-top: 40px;
+        }
+        .conditions {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 20px 10px;
+                width: 100%;
+            }
+            .bonus-image {
+                width: 155px;
+                height: 160px;
+                left: 10px;
+                bottom: calc(100% + 20px);
+                background-size: cover;
+                background-position: 0 0;
+            }
+            .light-section {
+                padding: 50px 0;
+                clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+            }
+            .centered {
+                width: 95%;
+            }
+            #static-page-section .section-title {
+                font-size: 30px;
+            }
+            #static-page-section p {
+                font-size: 18px;
+            }
+            #static-page-section li {
+                font-size: 18px;
+                width: 300px;
+            }
+            #static-page-section span {
+                font-size: 24px;
+            }
+            #static-page-section .big-btn {
+                padding: 15px;
+                width: calc(100% - 20px);
+                font-size: 12px;
+            }
+            #static-page-section .small-btn {
+                margin-left: 165px;
+                width: 50%;
+                font-size: 12px;
+            }
+            .light-section.top {
+                height: 500px;
+                background-image: none;
+            }
+            .top-description {
+                width: 100%;
+                padding-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id='static-page-section'>
+        <div class="light-section top">
+            <div class="top-description">
+                <h2 class="section-title">Jetzt Komm rein da!</h2>
+                <p class="list-title">Oder keinE AHNUNG VON  FUSSBALL?</p>
+                <ul class="top-list">
+                    <li class="list-item">Doch ?!</li>
+                    <li class="list-item">ÄH, HALLO ??</li>
+                    <li class="list-item">Versteh die Frage<br /> nicht</li>
+                </ul>
+                <button class="small-btn">registrieren und bonus kassieren</button>
+            </div>
+        </div>
+
+        <div class="dark-section">
+            <div class="bonus-image"></div>
+            <div class="main-content centered">
+                <h2 class="section-title">Das bekommst du für deine Einzahlung:</h2>
+                <p class="bonus-info">
+                    100€ Einzahlung + 100€ Bonus
+                    <span class="big-text">Spiel mit 200€</span>
+                </p>
+                <p class="bonus-info accent">
+                    150€ Einzahlung + 150€ Bonus
+                    <span class="big-text">Spiel mit 300€</span>
+                </p>
+                <button class="big-btn">Jetzt Registrieren und Bonus kassieren</button>
+            </div>
+        </div>
+
+        <div class="light-section">
+            <div class="main-content">
+                <h2 class="section-title">So funktioniert‘s</h2>
+                <ol class="num-list">
+                    <li class="num-list-item">Registrieren
+                        <p class="item-info">Schnell und unkompliziert ein Konto erstellen</p>
+                    </li>
+                    <li class="num-list-item">Bonus aktivieren
+                        <p class="item-info">Aktiviere deinen Bonus unter „Meine Boni“ im KundenKonto</p>
+                    </li>
+                    <li class="num-list-item">Sicher einzahlen
+                        <p class="item-info">MINDESTENS 10€ EINZAHLEN UND DEIn Bonus wird dir automatisch gut geschrieben.</p>
+                    </li>
+                </ol>
+                <button class="big-btn">Jetzt Registrieren und Bonus kassieren</button>
+            </div>
+        </div>
+
+        <div class="dark-section">
+            <div class="main-content description">
+                <h2 class="section-title">Bonusbedingungen</h2>
+                <p class="conditions">1. Der Aktionszeitraum beginnt am 02.09.2021 (12:00 MEZ) und endet am 31.12.2021 (00:00 MEZ).</p>
+                <p class="conditions">2. Maßgeblich für den Erhalt dieses Bonus ist die erste Einzahlung.</p>
+                <p class="conditions">3. Diese Bonusaktion steht jedem Online-Wettkonto einmalig zur Verfügung.</p>
+                <p class="conditions">4. Der eingezahlte Betrag muss 1x und der Bonusbetrag muss 6x mit Einsätzen auf Sportwetten umgesetzt  werden. Dabei sind nur Wetten mit einer Mindestgesamtquote von 2,00 pro Wettschein zulässig. 
+                    Beispiel: Du zahlst 150€ ein und erhältst 150€ Bonus und hast 300€ auf deinem Bonuskonto. Der Gesamtumsatz beträgt 1050€ (1x150€ + 6x150€).</p>
+                <p class="conditions">5. Die Bonusbedingungen müssen innerhalb von 30 Tagen ab der Ersteinzahlung erfüllt werden. Andernfalls verliert der Bonus seine Gültigkeit.</p>
+                <p class="conditions">6. Die Wettvarianten Pre Match-, Live-, Single-, und Kombiwetten sind zulässig.</p>
+                <p class="conditions">7. Der Bonus muss vor der ersten Einzahlung im Kundenkonto unter „Meine Boni“ aktiviert werden. Danach wird dem Kunden der Bonus sofort nach der Ersteinzahlung von mindestens 10€ gutgeschrieben. Der Bonus beträgt 100% der ersten Einzahlung, maximal jedoch 150€.</p>
+                <p class="conditions">8. Werden zwei oder mehr Wetten auf verschiedene Spielausgänge des gleichen Wettereignisses abgegeben, verfällt der Bonus.</p>
+                <p class="conditions">9. Wettereignisse, deren Bewertung (Vorliegen eines gültigen Ergebnisses) nicht innerhalb des Bonuszeitraums zu erwarten ist (sogenannte Langzeitwetten), erfüllen nicht die Bonusbedingungen.</p>
+                <p class="conditions">10. Mit dem Bonusgeld erwirtschaftete Gewinne werden auf dem Bonuskonto gutgeschrieben und zählen nicht zum Echtgeldguthaben.</p>
+                <p class="conditions">11. Sobald alle offenen Wetten, die Bonusgeld beinhalten, abgerechnet sind und das Bonusguthaben einen Stand von 0,00 € erreicht hat, verlieren die Bonusbedingungen ihre Gültigkeit.</p>
+                <p class="conditions">12. Sobald die Bonusfrist abgelaufen ist, verfallen das Bonusgeld und alle damit erspielten Gewinne.</p>
+                <p class="conditions">13. Der Bonus ist für folgende Länder gültig: Deutschland und Österreich. Maßgeblich ist der Wohnsitz des registrierten Kunden.</p>
+                <p class="conditions">14. Es gelten die Allgemeinen Bonusbedingungen der sportwetten.de GmbH. sportwetten.de/informationen/abb.</p>
+                <p class="conditions">15. sportwetten.de hat das Recht, jederzeit und ohne Angabe von Gründen, die Aktion zu verändern oder zu beenden.</p>
+                <button class="big-btn">Jetzt Registrieren und Bonus kassieren</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
